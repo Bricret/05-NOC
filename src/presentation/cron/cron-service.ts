@@ -10,7 +10,6 @@ export class CronService {
 
 
     static createJob( cronTime: CronTime, onTick: OnTick ) {
-        console.log('Empieza...');
         const job = new CronJob( cronTime, onTick );
         job.start();
 

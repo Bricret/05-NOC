@@ -2,6 +2,7 @@ import { CheckService } from "../domain/use-cases/checks/check.use-case";
 import { FileSystemDataSource } from "../infrastructure/datasource/file-system.datasource";
 import { LogRepositoryImpl } from "../infrastructure/repositories/log.repository.impl";
 import { CronService } from "./cron/cron-service";
+import { envs } from "../config/plugins/envs.plugins";
 
 const fileSystemLogRepository = new LogRepositoryImpl(
     new FileSystemDataSource()
@@ -12,7 +13,10 @@ export class ServerApp {
 
     static start() {
 
-        
+        console.log('Empieza...');
+
+        //mandar email
+
 
         CronService.createJob( 
             '*/5 * * * * *', 

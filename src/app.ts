@@ -7,6 +7,6 @@ import { ServerApp } from "./presentation/server";
 })();
 
 function main() {
-    // ServerApp.start();
+    ServerApp.start();
     // console.log( envs );
 }
